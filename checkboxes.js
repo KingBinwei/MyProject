@@ -21,6 +21,11 @@
     this.el.addEventListener('click', this.toggle.bind(this));//借用当前对象的域调用toggle函数
 
     this.el.setAttribute('role', 'checkbox');
+    if (this.el.hasAttribute('checked')) {
+      this.el.setAttribute('aria-checked', 'true');
+    } else {
+      this.el.setAttribute('aria-checked', 'false');
+    }
     // Any other set-up we want to do here?
   }
 
