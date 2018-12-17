@@ -18,8 +18,9 @@
     this.el = el;
 
     this.el.addEventListener('keydown', this.handleKeyDown.bind(this));
-    this.el.addEventListener('click', this.toggle.bind(this));
+    this.el.addEventListener('click', this.toggle.bind(this));//借用当前对象的域调用toggle函数
 
+    this.el.setAttribute('role', 'checkbox');
     // Any other set-up we want to do here?
   }
 
